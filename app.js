@@ -155,6 +155,7 @@
     show(header(), el('h1', { text: t().title }), el('p', { class: 'muted', text: t().intro }),
       el('ul', { class: 'list' }, ...t().checklist(state.side).map((line) => el('li', { text: line }))),
       el('p', { class: 'note', text: t().privacy }),
+      el('p', { class: 'note' }, el('a', { href: state.lang === 'tr' ? 'legal/tr/yuz-verisi.html' : 'legal/face-data.html', target: '_blank', rel: 'noopener', text: state.lang === 'tr' ? 'Yüz Verisi Politikası' : 'Face Data Policy' })),
       el('label', { class: 'check', for: 'consent' }, box, el('span', { text: t().consent })),
       message, el('div', { class: 'grow' }), start);
   }
